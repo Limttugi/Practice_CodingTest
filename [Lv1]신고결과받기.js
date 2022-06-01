@@ -2,9 +2,8 @@ const id_list = ["con", "ryan"];
 const report = ["ryan con", "ryan con", "ryan con", "ryan con"];
 const k = 3;
 
-const uniqueReport = report.filter((e, i) => {
-  return report.indexOf(e) === i;
-});
+// 신고 중복 제거
+const uniqueReport = new Set(report);
 
 const id_list_num = id_list.length; // id의 수
 let answer = new Array(id_list_num).fill(0);
